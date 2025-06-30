@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct sparkle_cloud_qrcodeApp: App {
+struct spackle_codeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
