@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		AABFEEEE2E12B7910062C9CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABFEED82E12B78D0062C9CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AABFEEDF2E12B78D0062C9CD;
+			remoteInfo = sparkle_cloud_qrcode;
+		};
+		AABFEEF82E12B7910062C9CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABFEED82E12B78D0062C9CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AABFEEDF2E12B78D0062C9CD;
+			remoteInfo = sparkle_cloud_qrcode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AABFEEE02E12B78D0062C9CD /* sparkle_cloud_qrcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sparkle_cloud_qrcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABFEEED2E12B7910062C9CD /* sparkle_cloud_qrcodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sparkle_cloud_qrcodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABFEEF72E12B7910062C9CD /* sparkle_cloud_qrcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sparkle_cloud_qrcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AABFEEE22E12B78D0062C9CD /* sparkle_cloud_qrcode */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sparkle_cloud_qrcode;
+			sourceTree = "<group>";
+		};
+		AABFEEF02E12B7910062C9CD /* sparkle_cloud_qrcodeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sparkle_cloud_qrcodeTests;
+			sourceTree = "<group>";
+		};
+		AABFEEFA2E12B7910062C9CD /* sparkle_cloud_qrcodeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = sparkle_cloud_qrcodeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AABFEEDD2E12B78D0062C9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABFEEEA2E12B7910062C9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABFEEF42E12B7910062C9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AABFEED72E12B78D0062C9CD = {
+			isa = PBXGroup;
+			children = (
+				AABFEEE22E12B78D0062C9CD /* sparkle_cloud_qrcode */,
+				AABFEEF02E12B7910062C9CD /* sparkle_cloud_qrcodeTests */,
+				AABFEEFA2E12B7910062C9CD /* sparkle_cloud_qrcodeUITests */,
+				AABFEEE12E12B78D0062C9CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AABFEEE12E12B78D0062C9CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AABFEEE02E12B78D0062C9CD /* sparkle_cloud_qrcode.app */,
+				AABFEEED2E12B7910062C9CD /* sparkle_cloud_qrcodeTests.xctest */,
+				AABFEEF72E12B7910062C9CD /* sparkle_cloud_qrcodeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AABFEEDF2E12B78D0062C9CD /* sparkle_cloud_qrcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABFEF012E12B7910062C9CD /* Build configuration list for PBXNativeTarget "sparkle_cloud_qrcode" */;
+			buildPhases = (
+				AABFEEDC2E12B78D0062C9CD /* Sources */,
+				AABFEEDD2E12B78D0062C9CD /* Frameworks */,
+				AABFEEDE2E12B78D0062C9CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AABFEEE22E12B78D0062C9CD /* sparkle_cloud_qrcode */,
+			);
+			name = sparkle_cloud_qrcode;
+			packageProductDependencies = (
+			);
+			productName = sparkle_cloud_qrcode;
+			productReference = AABFEEE02E12B78D0062C9CD /* sparkle_cloud_qrcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AABFEEEC2E12B7910062C9CD /* sparkle_cloud_qrcodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABFEF042E12B7910062C9CD /* Build configuration list for PBXNativeTarget "sparkle_cloud_qrcodeTests" */;
+			buildPhases = (
+				AABFEEE92E12B7910062C9CD /* Sources */,
+				AABFEEEA2E12B7910062C9CD /* Frameworks */,
+				AABFEEEB2E12B7910062C9CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AABFEEEF2E12B7910062C9CD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AABFEEF02E12B7910062C9CD /* sparkle_cloud_qrcodeTests */,
+			);
+			name = sparkle_cloud_qrcodeTests;
+			packageProductDependencies = (
+			);
+			productName = sparkle_cloud_qrcodeTests;
+			productReference = AABFEEED2E12B7910062C9CD /* sparkle_cloud_qrcodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AABFEEF62E12B7910062C9CD /* sparkle_cloud_qrcodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABFEF072E12B7910062C9CD /* Build configuration list for PBXNativeTarget "sparkle_cloud_qrcodeUITests" */;
+			buildPhases = (
+				AABFEEF32E12B7910062C9CD /* Sources */,
+				AABFEEF42E12B7910062C9CD /* Frameworks */,
+				AABFEEF52E12B7910062C9CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AABFEEF92E12B7910062C9CD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AABFEEFA2E12B7910062C9CD /* sparkle_cloud_qrcodeUITests */,
+			);
+			name = sparkle_cloud_qrcodeUITests;
+			packageProductDependencies = (
+			);
+			productName = sparkle_cloud_qrcodeUITests;
+			productReference = AABFEEF72E12B7910062C9CD /* sparkle_cloud_qrcodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AABFEED82E12B78D0062C9CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					AABFEEDF2E12B78D0062C9CD = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					AABFEEEC2E12B7910062C9CD = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = AABFEEDF2E12B78D0062C9CD;
+					};
+					AABFEEF62E12B7910062C9CD = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = AABFEEDF2E12B78D0062C9CD;
+					};
+				};
+			};
+			buildConfigurationList = AABFEEDB2E12B78D0062C9CD /* Build configuration list for PBXProject "sparkle_cloud_qrcode" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AABFEED72E12B78D0062C9CD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AABFEEE12E12B78D0062C9CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AABFEEDF2E12B78D0062C9CD /* sparkle_cloud_qrcode */,
+				AABFEEEC2E12B7910062C9CD /* sparkle_cloud_qrcodeTests */,
+				AABFEEF62E12B7910062C9CD /* sparkle_cloud_qrcodeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AABFEEDE2E12B78D0062C9CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABFEEEB2E12B7910062C9CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABFEEF52E12B7910062C9CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AABFEEDC2E12B78D0062C9CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABFEEE92E12B7910062C9CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABFEEF32E12B7910062C9CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AABFEEEF2E12B7910062C9CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AABFEEDF2E12B78D0062C9CD /* sparkle_cloud_qrcode */;
+			targetProxy = AABFEEEE2E12B7910062C9CD /* PBXContainerItemProxy */;
+		};
+		AABFEEF92E12B7910062C9CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AABFEEDF2E12B78D0062C9CD /* sparkle_cloud_qrcode */;
+			targetProxy = AABFEEF82E12B7910062C9CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AABFEEFF2E12B7910062C9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AABFEF002E12B7910062C9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AABFEF022E12B7910062C9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elangx.sparkle-cloud-qrcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AABFEF032E12B7910062C9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elangx.sparkle-cloud-qrcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AABFEF052E12B7910062C9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elangx.sparkle-cloud-qrcodeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sparkle_cloud_qrcode.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sparkle_cloud_qrcode";
+			};
+			name = Debug;
+		};
+		AABFEF062E12B7910062C9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elangx.sparkle-cloud-qrcodeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sparkle_cloud_qrcode.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sparkle_cloud_qrcode";
+			};
+			name = Release;
+		};
+		AABFEF082E12B7910062C9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elangx.sparkle-cloud-qrcodeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sparkle_cloud_qrcode;
+			};
+			name = Debug;
+		};
+		AABFEF092E12B7910062C9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8C7N6C3RM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elangx.sparkle-cloud-qrcodeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sparkle_cloud_qrcode;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AABFEEDB2E12B78D0062C9CD /* Build configuration list for PBXProject "sparkle_cloud_qrcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABFEEFF2E12B7910062C9CD /* Debug */,
+				AABFEF002E12B7910062C9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABFEF012E12B7910062C9CD /* Build configuration list for PBXNativeTarget "sparkle_cloud_qrcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABFEF022E12B7910062C9CD /* Debug */,
+				AABFEF032E12B7910062C9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABFEF042E12B7910062C9CD /* Build configuration list for PBXNativeTarget "sparkle_cloud_qrcodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABFEF052E12B7910062C9CD /* Debug */,
+				AABFEF062E12B7910062C9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABFEF072E12B7910062C9CD /* Build configuration list for PBXNativeTarget "sparkle_cloud_qrcodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABFEF082E12B7910062C9CD /* Debug */,
+				AABFEF092E12B7910062C9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AABFEED82E12B78D0062C9CD /* Project object */;
+}
