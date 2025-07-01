@@ -24,8 +24,11 @@ struct PicSwitchSampleView: View {
     @State private var isPlaying = false
     @State private var frameRate: Double = 2  // 默认帧率：2 FPS
     // 使用CADisplayLink进行精确计时
+    @State private var isOpenFrameSync = false
     @State private var displayLink: CADisplayLink?
     @State private var lastFrameTime: CFTimeInterval = 0
+    // 固定帧率
+    @State private var timer: Timer? = nil
     // 实际帧率计算
     @State private var actualFrameRate: Double = 0
     @State private var frameInterval: Double = 0
@@ -67,8 +70,16 @@ struct PicSwitchSampleView: View {
                 }
                 .padding(.vertical)
                 .onChange(of: frameRate, { k,v in
-                    restartDisplayLink()
+                    restartDisplay()
                 })
+                .disabled(displayLink != nil)
+                
+                Toggle("开启帧同步", isOn: $isOpenFrameSync)
+                .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                .onChange(of: isOpenFrameSync, {k, v in
+                    restartDisplay()
+                })
+                
             }
             .padding()
             
@@ -87,19 +98,6 @@ struct PicSwitchSampleView: View {
                 }
             }
             .padding(.top)
-            
-            //丢帧
-            // 颜色信息显示
-            VStack(spacing: 8) {
-                Text("当前颜色")
-                    .font(.headline)
-                Text("丢帧：\(String(format: "%d", droppedFrameCount))")
-                    .font(.system(.body, design: .monospaced))
-                    .padding(5)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(5)
-            }
-            .padding(.vertical)
             
             Spacer()
         }
@@ -135,12 +133,71 @@ struct PicSwitchSampleView: View {
     private func togglePlay() {
         isPlaying.toggle()
         if isPlaying {
+            startDisplay()
+        } else {
+            stopDisplay()
+        }
+    }
+    
+    //开始刷新
+    private func startDisplay() {
+        if isOpenFrameSync {
             startDisplayLink()
         } else {
-            stopDisplayLink()
+            startFPSDisplay()
+        }
+    }
+    
+    // 关闭刷新
+    private func stopDisplay() {
+        stopDisplayLink()
+        stopTimer()
+    }
+    
+    // 重置状态
+    private func reset() {
+        stopDisplay()
+        isPlaying = false
+        currentColorIndex = 0
+        frameRate = 2
+    }
+    
+    // 重启刷新
+    private func restartDisplay() {
+        if isPlaying {
+            if isOpenFrameSync {
+                stopTimer()
+                startDisplayLink()
+            } else {
+                stopDisplayLink()
+                startFPSDisplay()
+            }
         }
     }
         
+    
+    //开启固定帧刷新
+    private func startFPSDisplay() {
+        let interval = 1.0 / frameRate
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in
+            updateFrame()
+        }
+    }
+    
+    // 重启定时器（帧率变化时）
+    private func restartTimer() {
+        timer?.invalidate()
+        if isPlaying {
+            startFPSDisplay()
+        }
+    }
+    
+    //停止定制器
+    private func stopTimer() {
+        timer?.invalidate()
+    }
+    
     // 启动CADisplayLink
     private func startDisplayLink() {
         stopDisplayLink()
@@ -151,17 +208,10 @@ struct PicSwitchSampleView: View {
             
         // 使用 Swift 闭包创建 CADisplayLink
         displayLink = CADisplayLink { [self] displayLink in
-            self.updateFrame(displaylink: displayLink)
+            self.updateFrame()
         }
                 
         displayLink?.add(to: .current, forMode: .default)
-    }
-        
-    // 重启CADisplayLink
-    private func restartDisplayLink() {
-        if isPlaying {
-            startDisplayLink()
-        }
     }
         
     // 停止CADisplayLink
@@ -169,17 +219,11 @@ struct PicSwitchSampleView: View {
         displayLink?.invalidate()
         displayLink = nil
     }
-        
-    // 重置状态
-    private func reset() {
-        stopDisplayLink()
-        isPlaying = false
-        currentColorIndex = 0
-    }
+
         
     // 帧更新逻辑
-    private func updateFrame(displaylink: CADisplayLink) {
-        currentColorIndex = (currentColorIndex + 1) % 2
+    private func updateFrame() {
+        currentColorIndex = (currentColorIndex + 1) % colors.count
     }
 }
 

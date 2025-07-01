@@ -31,8 +31,6 @@ struct QRCodeGeneratorView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                
-                
                 // QR码显示区域
                 VStack {
                     if let qrCodeImage = qrCodeImage {
@@ -89,7 +87,12 @@ struct QRCodeGeneratorView: View {
                 .cornerRadius(12)
 
             }
+            .contentShape(Rectangle())
+            .onTapGesture{
+                hideKeyboard()
+            }
             .padding()
+            
         }
     }
     
@@ -257,3 +260,8 @@ struct QRCodeGeneratorView: View {
     }
 }
 
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
