@@ -15,7 +15,6 @@ import CoreImage.CIFilterBuiltins
 struct QRCodeGeneratorView: View {
     // QR码生成状态
     @State private var inputText: String = "https://www.apple.com"
-    @State private var qrCodeImage: UIImage?
     @State private var qrCodePixels: [[Bool]] = []
     @State private var qrCodeSize: CGSize = .zero
     @State private var isPlaying = false
@@ -23,6 +22,9 @@ struct QRCodeGeneratorView: View {
     @State private var timer: Timer? = nil
     @State private var currentImageIndex = 0
     @State private var qrCodeImages: [UIImage] = []
+    @State private var qrCodeImage: UIImage? = nil
+    @State private var displayLink: CADisplayLink?
+    
     
     // 错误纠正级别
     @State private var errorCorrectionLevel: String = "M"
@@ -33,8 +35,8 @@ struct QRCodeGeneratorView: View {
             VStack(spacing: 20) {
                 // QR码显示区域
                 VStack {
-                    if let qrCodeImage = qrCodeImage {
-                        Image(uiImage: qrCodeImage)
+                    if !qrCodeImages.isEmpty {
+                        Image(uiImage: qrCodeImages[currentImageIndex])
                             .resizable()
                             .interpolation(.none)
                             .scaledToFit()
@@ -80,6 +82,14 @@ struct QRCodeGeneratorView: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
+                        
+                        Button(displayLink == nil ? "播放" : "停止") {
+                            if displayLink == nil {
+                                startDisplayLink()
+                            } else {
+                                stopDisplayLink()
+                            }
+                        }
                     }
                 }
                 .padding()
@@ -96,10 +106,6 @@ struct QRCodeGeneratorView: View {
         }
     }
     
-    // 计算黑点数量
-    private var blackPixelCount: Int {
-        qrCodePixels.flatMap { $0 }.filter { $0 }.count
-    }
     
     // 生成QR码
     private func generateQRCode() {
@@ -149,10 +155,13 @@ struct QRCodeGeneratorView: View {
             return
         }
         
+        let bytesPerRow = cgImage.bytesPerRow
+        
+        
         // 遍历每个像素
         for y in 0..<height {
             for x in 0..<width {
-                let pixelInfo = (width * y + x) * 4
+                let pixelInfo = y * bytesPerRow + x * 4
                 
                 // 获取RGB值
                 let r = data[pixelInfo]
@@ -166,6 +175,7 @@ struct QRCodeGeneratorView: View {
         }
         
         qrCodePixels = pixels
+        createAlternatingImages()
     }
     
     
@@ -181,16 +191,16 @@ struct QRCodeGeneratorView: View {
         for y in 0..<height {
             for x in 0..<width {
                 if qrCodePixels[y][x] {
-                    // 黑色
+                    // 颜色1
                     image1Data.append(0)   // R
-                    image1Data.append(0)   // G
+                    image1Data.append(48)   // G
                     image1Data.append(0)   // B
                     image1Data.append(255) // A
                 } else {
-                    // 白色
-                    image1Data.append(255) // R
-                    image1Data.append(255) // G
-                    image1Data.append(255) // B
+                    // 透明
+                    image1Data.append(56) // R
+                    image1Data.append(56) // G
+                    image1Data.append(56) // B
                     image1Data.append(255) // A
                 }
             }
@@ -201,16 +211,16 @@ struct QRCodeGeneratorView: View {
         for y in 0..<height {
             for x in 0..<width {
                 if qrCodePixels[y][x] {
-                    // 原始为黑色 -> 变为白色
-                    image2Data.append(255) // R
-                    image2Data.append(255) // G
-                    image2Data.append(255) // B
+                    // 颜色2
+                    image2Data.append(56) // R
+                    image2Data.append(8) // G
+                    image2Data.append(56) // B
                     image2Data.append(255) // A
                 } else {
-                    // 原始为白色 -> 变为黑色
-                    image2Data.append(0)   // R
-                    image2Data.append(0)   // G
-                    image2Data.append(0)   // B
+                    // 透明
+                    image2Data.append(56)   // R
+                    image2Data.append(56)   // G
+                    image2Data.append(56)   // B
                     image2Data.append(255) // A
                 }
             }
@@ -257,6 +267,33 @@ struct QRCodeGeneratorView: View {
         }
         
         return UIImage(cgImage: cgImage)
+    }
+    
+    // 启动CADisplayLink
+    private func startDisplayLink() {
+        if qrCodeImages.isEmpty {
+            return
+        }
+        stopDisplayLink()
+            
+        // 使用 Swift 闭包创建 CADisplayLink
+        displayLink = CADisplayLink { [self] displayLink in
+            self.updateFrame()
+        }
+                
+        displayLink?.add(to: .current, forMode: .default)
+    }
+        
+    // 停止CADisplayLink
+    private func stopDisplayLink() {
+        displayLink?.invalidate()
+        displayLink = nil
+    }
+
+        
+    // 帧更新逻辑
+    private func updateFrame() {
+        currentImageIndex = (currentImageIndex + 1) % qrCodeImages.count
     }
 }
 
